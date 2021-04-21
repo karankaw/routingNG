@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=Nehk4tBxD4o
+-----------------------------------------------------------
 ng new routing-demo
 -----------------------------------------------------------
 ng generate --help
@@ -99,3 +101,113 @@ https://blog.angular.io/version-6-of-angular-now-available-cc56b0efa7a4
 -----------------------------------------------------------
 In Angular 6 + , angular-cli.json became angular.json
 -----------------------------------------------------------
+https://www.tutorialspoint.com/angular4/angular4_module.htm#:~:text=Module%20in%20Angular%20refers%20to,become%20part%20of%20a%20module.
+
+The NgModule needs to be imported as follows −
+
+import { NgModule } from '@angular/core';
+The structure for the ngmodule is as shown below −
+
+@NgModule({
+   declarations: [
+      AppComponent
+   ],
+   imports: [
+      BrowserModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
+})
+It starts with @NgModule and contains an object which has declarations, import s, providers and bootstrap.
+
+Declaration
+It is an array of components created. If any new component gets created, it will be imported first and the reference will be included in declarations as shown below −
+
+declarations: [
+   AppComponent,
+   NewCmpComponent
+]
+Import
+It is an array of modules required to be used in the application. It can also be used by the components in the Declaration array. For example, right now in the @NgModule we see the Browser Module imported. In case your application needs forms, you can include the module as follows −
+
+import { FormsModule } from '@angular/forms';
+The import in the @NgModule will be like the following −
+
+imports: [
+   BrowserModule,
+   FormsModule
+]
+Providers
+This will include the services created.
+
+Bootstrap
+This includes the main app component for starting the execution.
+-----------------------------------------------------------
+app-routing.module.ts   -----> class AppRoutingModule
+app.module.ts      --------------> class AppModule
+---------------------------------------------------------
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+
+@NgModule({
+  declarations: [],
+  imports: [],
+  providers: [],
+  bootstrap: []
+})
+export class AppRoutingModule {
+
+}
+
+---------------------------------------------------------
+ts file have many classes, consts, Lets etc some of them which have export Qualifier
+---------------------------------------------------------
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+
+const routes: Routes = []
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+---------------------------------------------------------
+ng g c employee-list -s -t
+g alias for generate
+c alias for component
+-s alias for --inline-style
+-t alias for --inline-template
+---------------------------------------------------------
+https://www.tutorialsteacher.com/typescript/typescript-any
+
+export const routingComponents  : any [] = [EmployeeListComponent, DepartmentListComponent]
+
+---------------------------------------------------------
+<router-outlet></router-outlet>
+
+In app.component.ts
+Enter a directive 
+<router-outlet></router-outlet>
+
+Acts as a placeholder that Angular dynamically fills based on the current router state.
+---------------------------------------------------------
+nav Tag
+
+https://www.w3schools.com/tags/tag_nav.asp
+
+---------------------------------------------------------
+https://stackoverflow.com/questions/58081360/anchor-href-vs-angular-routerlink/61588147#61588147
+<a href="employees">Employees</a> | 
+<a href="departments">Departments</a> |
+<a routerLink="employees">EmployeesNG</a> | 
+<a routerLink="departments">DepartmentsNG</a>
+---------------------------------------------------------
+Href is the basic attribute provided by Html to navigate through pages which reloads the page on click.
+
+routerLink is the attribute provided by angular to navigate to different components without reloading the page.
+
+Major difference between both is that href kills the state of the current page where routerLink doesnt lose the state of the page.
+
+For Eg. if an input text box is present in the page, the routerLink will retains its value after navigation.The routerLink can be considered as the custom attribute of href in angular by overriding some of the features like Page reloading
+------------------------------------------------------------
