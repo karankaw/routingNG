@@ -81,3 +81,21 @@ $ ng generate module app-routing --flat --module=app
 CREATE src/app/app-routing.module.ts (196 bytes)
 UPDATE src/app/app.module.ts (410 bytes)
 -----------------------------------------------------------
+ng add vs npm install
+https://stackoverflow.com/questions/50169680/difference-between-ng-add-package-name-vs-npm-install-package-name-in-angula/50169764#50169764
+
+ng add - does npm install and adds scripts[] in angular.json
+ng add
+Will use your package manager to download new dependencies and invoke an installation script which can update your project with configuration changes (In angular.json file as well), add additional dependencies (e.g. polyfills if needed), or scaffold package-specific initialization code.
+
+For example you run the command ng add @angular/material — Install, it will automatically install the package and configure in angular.json file too.
+npm install
+Whereas npm install <package> will only install your package into your project but will not configure in order to use.
+
+For example you run the command npm install jquery it will install jQuery in your project but you need to configure manually in .angular-cli.json file (as in v5)
+For more information read out here -
+
+https://blog.angular.io/version-6-of-angular-now-available-cc56b0efa7a4
+-----------------------------------------------------------
+In Angular 6 + , angular-cli.json became angular.json
+-----------------------------------------------------------
