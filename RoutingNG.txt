@@ -1,0 +1,78 @@
+ng new routing-demo
+-----------------------------------------------------------
+ng generate --help
+Available Schematics:
+  Collection "@schematics/angular" (default):
+    app-shell
+    application
+    class
+    component
+    directive
+    enum
+    guard
+    interceptor
+    interface
+    library
+    module
+    pipe
+    resolver
+    service
+    service-worker
+    web-worker
+-----------------------------------------------------------
+https://stackoverflow.com/questions/41354755/what-is-the-best-way-to-delete-a-component-with-cli
+To remove component do it manually
+-----------------------------------------------------------
+Add component to angular
+It creates html, ts, css, spec.ts, app.module.ts (Root App)
+INDCORP+703250313@BMBW738Y2 MINGW64 /c/IEF/routingNG/routing-demo (develop)
+$ ng generate component foo
+CREATE src/app/foo/foo.component.html (18 bytes)
+CREATE src/app/foo/foo.component.spec.ts (605 bytes)
+CREATE src/app/foo/foo.component.ts (263 bytes)
+CREATE src/app/foo/foo.component.css (0 bytes)
+UPDATE src/app/app.module.ts (384 bytes)
+-----------------------------------------------------------
+https://www.w3schools.com/tags/tag_base.asp
+The <base> tag specifies the base URL and/or target for all relative URLs in a document.
+<head>
+<base href="">
+</head>
+-----------------------------------------------------------
+How to add routing module in new Angular proj
+ng new NewAppName --routing
+-----------------------------------------------------------
+https://www.samjulien.com/add-routing-existing-angular-project
+Sometimes we don't know whether we want to add routing yet, so we say no. 
+What do we do, though, if we decide to add routing later? 
+	
+-----------------------------------------------------------
+src/app/
+app.component.ts
+                            .html
+							.css
+							.spec.ts
+app.module.ts
+
+app-routing.module.ts
+-----------------------------------------------------------
+https://angular.io/cli/generate#module-command
+module
+ng generate module <name> [options]
+ng g module <name> [options]
+Creates a new generic NgModule definition in the given or default project.
+
+--module	
+The declaring NgModule.
+Aliases: -m
+
+--routing	
+Create a routing module within new module.
+
+-----------------------------------------------------------
+ng generate module app-routing
+It creates a new module  in separate folder
+-----------------------------------------------------------
+ng generate module app-routing --flat
+It creates a new module  in existing project 
+-----------------------------------------------------------
