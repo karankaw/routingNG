@@ -42,7 +42,7 @@ The <base> tag specifies the base URL and/or target for all relative URLs in a d
 How to add routing module in new Angular proj
 ng new NewAppName --routing
 -----------------------------------------------------------
-https://www.samjulien.com/add-routing-existing-angular-project
+https://roytuts.com/how-to-add-routes-to-existing-angular-project/
 Sometimes we don't know whether we want to add routing yet, so we say no. 
 What do we do, though, if we decide to add routing later? 
 	
@@ -65,9 +65,10 @@ Creates a new generic NgModule definition in the given or default project.
 --module	
 The declaring NgModule.
 Aliases: -m
+--module=app tells the CLI to register it in the imports array of the AppModule.
 
 --routing	
-Create a routing module within new module.
+Create a routing module within new module as well.
 
 -----------------------------------------------------------
 ng generate module app-routing
@@ -75,4 +76,8 @@ It creates a new module  in separate folder
 -----------------------------------------------------------
 ng generate module app-routing --flat
 It creates a new module  in existing project 
+-----------------------------------------------------------
+$ ng generate module app-routing --flat --module=app
+CREATE src/app/app-routing.module.ts (196 bytes)
+UPDATE src/app/app.module.ts (410 bytes)
 -----------------------------------------------------------
