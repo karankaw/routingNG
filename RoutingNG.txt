@@ -198,6 +198,8 @@ https://www.w3schools.com/tags/tag_nav.asp
 
 ---------------------------------------------------------
 https://stackoverflow.com/questions/58081360/anchor-href-vs-angular-routerlink/61588147#61588147
+routerLink attribute 
+
 <a href="employees">Employees</a> | 
 <a href="departments">Departments</a> |
 <a routerLink="employees">EmployeesNG</a> | 
